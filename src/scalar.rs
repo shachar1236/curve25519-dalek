@@ -190,7 +190,7 @@ type UnpackedScalar = backend::serial::u64::scalar::Scalar52;
 type UnpackedScalar = backend::serial::u32::scalar::Scalar29;
 
 
-use serde::{Serialize, Deserialize};
+// use serde::{Serialize, Deserialize};
 /// The `Scalar` struct holds an integer \\(s < 2\^{255} \\) which
 /// represents an element of \\(\mathbb Z / \ell\\).
 #[derive(Copy, Clone, Hash, Serialize, Deserialize)]
