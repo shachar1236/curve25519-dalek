@@ -190,9 +190,10 @@ type UnpackedScalar = backend::serial::u64::scalar::Scalar52;
 type UnpackedScalar = backend::serial::u32::scalar::Scalar29;
 
 
+use serde::{Serialize, Deserialize};
 /// The `Scalar` struct holds an integer \\(s < 2\^{255} \\) which
 /// represents an element of \\(\mathbb Z / \ell\\).
-#[derive(Copy, Clone, Hash)]
+#[derive(Copy, Clone, Hash, Serialize, Deserialize)]
 pub struct Scalar {
     /// `bytes` is a little-endian byte encoding of an integer representing a scalar modulo the
     /// group order.
